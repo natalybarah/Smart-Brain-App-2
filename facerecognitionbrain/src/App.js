@@ -127,7 +127,7 @@ onButtonSubmit = () => {
     .then(response => {
       console.log("hi", response);
       if (response) {
-        fetch('http://localhost:1000/image', { 
+        fetch('https://smart-brain-app-2.onrender.com/image', { 
           method: 'put',
           headers: {'Content-type': 'application/json'},
           body: JSON.stringify({
