@@ -84,8 +84,8 @@ bcrypt.compare("veggies", hash, function(err, res) {
 });
 
 */
-app.listen(1000, ()=>{
-    console.log('app is running on 1000')
+app.listen(5432, ()=>{
+    console.log('app is running on 5432')
 })
 /*
 
