@@ -18,6 +18,10 @@ const db = knex({
       user: process.env.DATABASE_USER,
       password: process.env.DATABASE_PW,
       database: process.env.DATABASE_DB, //NOMBRE DE LA DATABASE? SMART_BRAIN
+      ssl: {
+        rejectUnauthorized: false, // Set to true in production for security
+      },
+      
     },
   });
   console.log('Database Host:', process.env.DATABASE_HOST);
@@ -25,6 +29,8 @@ console.log('Database User:', process.env.DATABASE_USER);
 console.log('Database Password:', process.env.DATABASE_PW);
 console.log('Database Name:', process.env.DATABASE_DB);
 console.log(process.env);
+
+
   db.select('*').from('users').then(data=>{
     console.log(data)
   })
