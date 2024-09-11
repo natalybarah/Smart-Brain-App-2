@@ -21,7 +21,7 @@ const db = knex({
       ssl: {
         rejectUnauthorized: false, // Set to true in production for security
       },
-      
+
     },
   });
   console.log('Database Host:', process.env.DATABASE_HOST);
@@ -94,8 +94,8 @@ bcrypt.compare("veggies", hash, function(err, res) {
 });
 
 */
-app.listen(5432, ()=>{
-    console.log('app is running on 5432')
+app.listen(5000, ()=>{
+    console.log('app is running on 5000')
 })
 /*
 
